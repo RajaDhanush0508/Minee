@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Container */
+.animation-box {
+  width: 95%;
+  height: 90vh; /* Adjusted for mobile */
+  background-color: black;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Adjusting Text Sizes for Different Screens */
+.first-text,
+.second-text,
+.third-text,
+.fourth-text,
+.fifth-text {
+  font-size: clamp(1.5rem, 4vw, 2.4rem); /* Responsive text */
+  position: absolute;
+  left: 5%;
+  width: 90%;
+  opacity: 0;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Animation Timing Adjustments */
+.first-text {
+  top: 10%;
+  animation: topFadeOut 7s;
+  color: white;
+}
+
+.second-text {
+  top: 20%;
+  animation: rightFadeInOut 8s 5s;
+  color: #ccc;
+}
+
+.third-text {
+  top: 30%;
+  animation: topFadeOutVertical 8s 9.5s;
+  color: #a3ddf0;
+}
+
+.fourth-text {
+  top: 40%;
+  animation: fadeInOut 9s 16.5s;
+  color: #f0a3be;
+}
+
+.fifth-text {
+  bottom: 10%;
+  animation: topFadeOut 9s 20s;
+  color: #f0eba3;
+}
+
+/* Animations */
+@keyframes topFadeOut {
+  0% { opacity: 0; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes rightFadeInOut {
+  0% { opacity: 0; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes topFadeOutVertical {
+  0% { opacity: 0; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  45% { opacity: 1; }
+  100% { opacity: 0; }
+}
